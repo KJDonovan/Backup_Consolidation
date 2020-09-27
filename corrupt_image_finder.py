@@ -28,7 +28,7 @@ files_to_scan = make_file_array(scan_dir)
 #Delete file if already exists
 #if os.path.exists(corrupt_images_file):
 #  os.remove(corrupt_images_file)
-results_dir='./results_corrupt_finder_'+time.strftime('%Y%m%d_%H%M%S')
+results_dir='../results_corrupt_finder_'+time.strftime('%Y%m%d_%H%M%S')
 os.mkdir(results_dir)
 
 corrupt_images_file='corrupted_images.txt'
