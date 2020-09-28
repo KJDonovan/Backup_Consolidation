@@ -12,8 +12,19 @@ timeS = time.strftime('%X %x %Z')
 #Read corrupt and empty file lists
 cfile=open(corrupt_list,"r")
 efile=open(empty_list,"r")
-clist=cfile.read()
-elist=efile.read()
+clist=cfile.readlines()
+elist=efile.readlines()
 
-for c in clist:
+print(clist[1])
+
+for cpath in clist:
+    c=cpath.rstrip()
+    splitdir=os.path.split(c)
+    filename=os.path.basename(c)
+    parentdir=os.path.dirname(c)
+    print('Next path:')
+    print(c)
+    print(splitdir)
+    print(filename)
+    print(parentdir)
     
