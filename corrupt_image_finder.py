@@ -1,8 +1,8 @@
 import os, PyPDF2, time
 from PIL import Image
 
-#scan_dir='/Users/kevindonovan/Dropbox (MIT)/Pictures KJD'
-scan_dir='/Volumes/SUBPAR/Pictures KJD'
+scan_dir='/Users/kevindonovan/Dropbox (MIT)/Pictures KJD'
+#scan_dir='/Volumes/SUBPAR/Pictures KJD'
 #scan_dir='/Users/kevindonovan/Dropbox (MIT)/Pictures KJD/Already on SUBPAR/2011to2019 Pictures KJD/2011 Pictures KJD/Oct2011/2011-10-08/'
 #scan_dir='/Users/kevindonovan/Desktop/Back_Consolidation/test_data_backup_consolidation/dir2delete_test_data_backup_consolidation'
 #scan_dir='/Volumes/photo/Pictures KJD'
@@ -82,6 +82,7 @@ sfile = results_dir+"/stats_corrupt_finder.txt"
 #if os.path.exists(sfile):
 #  os.remove(sfile)
 stats_file=open(sfile,"a")
+stats_file.write(scan_dir+'\n')
 stats_file.write("Files scanned for corruption: "+str(testedN)+'\n')
 stats_file.write("Empty files found: "+str(emptyN)+'\n')
 stats_file.write("Corrupt files found: "+str(corruptN)+'\n')
